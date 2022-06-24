@@ -52,6 +52,20 @@ if january:
         if submit:
             st.success("Submitted Successfully")
             db.put({"Name": name,  "Folder Link": folder})
+
+# Deta Detabase
+deta = Deta(st.secrets["deta_key1"])
+db = deta.Base("January Cohort")  
+
+    if assignment == 'SQL Internship':
+        st.subheader("January Cohort SQL Page")
+        form1 = st.form("forms1", clear_on_submit=True)
+        name1 = form1.text_input("Student Name")
+        folder1 = form1.text_input("Google Drive Link")
+        submit1 = form1.form_submit_button("Submit")
+        if submit1:
+            st.success("Submitted Successfully")
+            db.put({"Name": name1, "Folder Link": folder1})
             
 
 
