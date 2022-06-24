@@ -13,6 +13,10 @@ title_2 = '<p style="font-family:sans-serif; color:Grey;">Kindly fill in your de
 col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
+col_1, col_2 = st.columns(2)
+
+january = col_1.checkbox('January Cohort')
+
 
 
 
