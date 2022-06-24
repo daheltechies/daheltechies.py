@@ -27,7 +27,7 @@ deta = Deta(st.secrets["deta_key"])
 
 with st.form("internship app"):
     name = col_1.text_input('Your Name')
-    cohort = col_1.selectbox('Select Your Cohort', ('Select One',January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
+    cohort = col_1.selectbox('Select Your Cohort', ('Select One','January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
                                              'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
                                              'October Cohort', 'November Cohort', 'December Cohort'))
     course = col_2.selectbox('Select Your Internship Course',('select One','Excel', 'SQL', 'Tableau', 'PowerBI'))
