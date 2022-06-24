@@ -20,17 +20,19 @@ title_3 = '<p style="font-family:sans-serif; color:Grey;">Choose the cohort you 
 col1.markdown(title_3, unsafe_allow_html=True)
 col2.image(image)
 
+col_1, col_2 = st.columns(2)
+
 # Form
 deta = Deta(st.secrets["deta_key"])
 
 with st.form("internship app"):
-    name = st.text_input('Your Name')
-    cohort = st.radio('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
+    name = col_1.text_input('Your Name')
+    cohort = col_1.radio('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
                                              'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
                                              'October Cohort', 'November Cohort', 'December Cohort'))
-    course = st.checkbox('Excel', 'SQL', 'Tableau', 'PowerBI')
-    link = st.text_input('Your Google Drive Link')
-    submit = st.form_submit_button("Submit")
+    course = col_2.radio('Select Your Internship Course'( 'Excel', 'SQL', 'Tableau', 'PowerBI'))
+    link = col_1.text_input('Your Google Drive Link')
+    submit = col_2.form_submit_button("Submit")
     if submit:
            db.put({"Student Name":name, "Cohort":cohort, "Course":course, "Google Drive Link":link})
                       
