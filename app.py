@@ -27,10 +27,10 @@ deta = Deta(st.secrets["deta_key"])
 
 with st.form("internship app"):
     name = col_1.text_input('Your Name')
-    cohort = col_1.radio('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
+    cohort = col_1.selectbox('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
                                              'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
                                              'October Cohort', 'November Cohort', 'December Cohort'))
-    course = col_2.radio('Select Your Internship Course',( 'Excel', 'SQL', 'Tableau', 'PowerBI'))
+    course = col_2.selectbox('Select Your Internship Course',( 'Excel', 'SQL', 'Tableau', 'PowerBI'))
     link = col_1.text_input('Your Google Drive Link')
     submit = st.form_submit_button("Submit")
     if submit:
