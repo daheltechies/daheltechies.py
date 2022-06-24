@@ -31,7 +31,7 @@ with st.form("internship app"):
                                              'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
                                              'October Cohort', 'November Cohort', 'December Cohort'))
     course = col_2.selectbox('Select Your Internship Course',( 'Excel', 'SQL', 'Tableau', 'PowerBI'))
-    link = col_1.text_input('Your Google Drive Link')
+    link = col_2.text_input('Your Google Drive Link')
     submit = st.form_submit_button("Submit")
     if submit:
            db.put({"Student Name":name, "Cohort":cohort, "Course":course, "Google Drive Link":link})
