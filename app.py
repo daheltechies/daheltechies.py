@@ -11,4 +11,5 @@ title_1 =  '<p style="font-family:sans-serif; color:Grey;">This Application allo
 col1.markdown(title_1, unsafe_allow_html=True)
 title_2 = '<p style="font-family:sans-serif; color:Grey;">Kindly fill in your details correctly</p>'
 col1.markdown(title_2, unsafe_allow_html=True)
+col2.image(image)
 
