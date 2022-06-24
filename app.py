@@ -24,6 +24,7 @@ col_1, col_2 = st.columns(2)
 
 # Form
 deta = Deta(st.secrets["deta_key"])
+db = deta.Base("Internship-Records")
 
 with st.form("internship app"):
     name = col_1.text_input('Your Name')
@@ -35,6 +36,13 @@ with st.form("internship app"):
     submit = st.form_submit_button("Submit")
     if submit:
            db.put({"Student_Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
+            
+try:
+    db_content = db.fetch().items
+    st.write(db_content)
+except:
+    pass
+    
             
            
     
