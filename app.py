@@ -15,7 +15,9 @@ col2.image(image)
 
 col_1, col_2 = st.columns(2)
 
-january = col_1.radio('January Cohort')
+st.write('Choose the cohort you belong to correctly')
+
+january = col_1.checkbox('January Cohort')
 february = col_2.checkbox('February Cohort')
 march = col_1.checkbox('March Cohort')
 april = col_2.checkbox('April Cohort')
