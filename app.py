@@ -27,7 +27,7 @@ with st.form("internship app"):
     name = st.text_input('Your Name')
     cohort = st.radio('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
                                              'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
-                                             'October Cohort', 'November Cohort', 'December Cohort')
+                                             'October Cohort', 'November Cohort', 'December Cohort'))
     course = st.checkbox('Excel', 'SQL', 'Tableau', 'PowerBI')
     link = st.text_input('Your Google Drive Link')
     submit = st.form_submit_button("Submit")
