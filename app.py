@@ -34,7 +34,7 @@ with st.form("internship app"):
     link = col_2.text_input('Your Google Drive Link')
     submit = st.form_submit_button("Submit")
     if submit:
-           db.put({"Student Name":name, "Cohort":cohort, "Course":course, "Google Drive Link":link})
+           db.put({"Student_Name":name, "Cohort":cohort, "Course":course, "Google_Drive_Link":link})
             
 try:
     db_content = db.fetch().items
