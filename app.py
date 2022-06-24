@@ -13,7 +13,7 @@ title_2 = '<p style="font-family:sans-serif; color:Grey;">Kindly fill in your de
 col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
-st.write("Please Choose The Right Cohort You Belong To")
+
 
 
 
