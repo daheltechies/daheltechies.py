@@ -36,10 +36,5 @@ with st.form("internship app"):
     if submit:
            db.put({"Student_Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
             
-try:
-    db_content = db.fetch().items
-    st.write(db_content)
-except:
-    pass
-                      
+           
     
