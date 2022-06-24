@@ -20,10 +20,7 @@ title_3 = '<p style="font-family:sans-serif; color:Grey;">Choose the cohort you 
 col1.markdown(title_3, unsafe_allow_html=True)
 col2.image(image)
 
-# Deta Detabase
-deta = Deta(st.secrets["deta_key"])
-db = deta.Base("CRM-Records")
-
+# Setting Cohort Buttons
 col_1, col_2 = st.columns(2)
 
 january = col_1.checkbox('January Cohort')
@@ -38,6 +35,10 @@ september = col_1.checkbox('September Cohort')
 october = col_2.checkbox('October Cohort')
 november = col_1.checkbox('November Cohort')
 december = col_2.checkbox('December Cohort')
+
+# Deta Detabase
+deta = Deta(st.secrets["deta_key"])
+db = deta.Base("January Cohort")
 
 if january:
     assignment = st.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
