@@ -34,7 +34,7 @@ with st.form("internship app"):
     powerbi = col_1.text_input('Enter Your Power BI Google Drive Folder Link')
     submit = st.form_submit_button("Submit")
     if submit:
-           db.put({"Student Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
+           db.put({"Student_Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
             
 try:
     db_content = db.fetch().items
