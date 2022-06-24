@@ -27,14 +27,14 @@ deta = Deta(st.secrets["deta_key"])
 
 with st.form("internship app"):
     name = col_1.text_input('Your Name')
-    cohort = col_1.selectbox('Select Your Cohort', ('Select One','January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
-                                             'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
-                                             'October Cohort', 'November Cohort', 'December Cohort'))
-    course = col_2.multiselect('Select Your Internship Course',('Select One Or All', 'Excel', 'SQL', 'Tableau', 'PowerBI'))
-    link = col_2.text_input('Your Google Drive Link')
+    cohort = col_1.text_input('Write Your Cohort Month')
+    excel = col_2.text_input('Enter Excel Google Drive Folder Link (If Null Skip)')
+    sql = col_1.text_input('Enter Your SQL Google Drive Folder Link')
+    tableau = col_1.text_input('Enter Your Tableau Google Drive Folder Link')
+    powerbi = col_1.text_input('Enter Your Power BI Google Drive Folder Link')
     submit = st.form_submit_button("Submit")
     if submit:
-           db.put({"Student_Name":name, "Cohort":cohort, "Course":course, "Google_Drive_Link":link})
+           db.put({"Student Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
             
 try:
     db_content = db.fetch().items
