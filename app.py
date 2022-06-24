@@ -41,6 +41,17 @@ december = col_2.checkbox('December Cohort')
 
 if january:
     assignment = st.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
+    # Excel Assignment
+    if assignment == 'Excel Internship':
+        st.subheader("January Cohort Excel Page")
+        form = st.form("forms", clear_on_submit=True)
+        name = form.text_input("Student Name")
+        folder = form.text_input("Google Drive Link")
+        submit = form.form_submit_button("Submit")
+        if submit:
+            st.success("Submitted Successfully")
+            db.put({"Name": name,  "Folder Link": folder})
+            
 
 
 
