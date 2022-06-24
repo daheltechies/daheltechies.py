@@ -38,7 +38,8 @@ december = col_2.checkbox('December Cohort')
 
 # Deta Detabase
 deta = Deta(st.secrets["deta_key"])
-db = deta.Base("January Cohort")
+deta = Deta(st.secrets["deta_key1"])
+
 
 if january:
     assignment = st.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
@@ -52,10 +53,6 @@ if january:
         if submit:
             st.success("Submitted Successfully")
             db.put({"Name": name,  "Folder Link": folder})
-
-# Deta Detabase
-deta = Deta(st.secrets["deta_key1"])
-db = deta.Base("January Cohort")  
 
     if assignment == 'SQL Internship':
         st.subheader("January Cohort SQL Page")
