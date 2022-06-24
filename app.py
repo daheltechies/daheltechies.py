@@ -36,9 +36,10 @@ october = col_2.checkbox('October Cohort')
 november = col_1.checkbox('November Cohort')
 december = col_2.checkbox('December Cohort')
 
-# Deta Detabase
+# January Deta Detabase
 deta = Deta(st.secrets["deta_key"])
 deta = Deta(st.secrets["deta_key1"])
+deta = Deta(st.secrets["deta_key2"])
 
 
 if january:
@@ -63,6 +64,16 @@ if january:
         if submit1:
             st.success("Submitted Successfully")
             db.put({"Name": name1, "Folder Link": folder1})
+            
+    if assignment == 'Tableau Internship':
+        st.subheader("January Cohort Tableau Page")
+        form2 = st.form("forms2", clear_on_submit=True)
+        name2 = form2.text_input("Student Name")
+        folder2 = form2.text_input("Google Drive Link")
+        submit2 = form2.form_submit_button("Submit")
+        if submit2:
+            st.success("Submitted Successfully")
+            db.put({"Name": name2, "Folder Link": folder2})
             
 
 
