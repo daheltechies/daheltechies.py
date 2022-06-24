@@ -20,63 +20,18 @@ title_3 = '<p style="font-family:sans-serif; color:Grey;">Choose the cohort you 
 col1.markdown(title_3, unsafe_allow_html=True)
 col2.image(image)
 
-# Setting Cohort Buttons
-col_1, col_2 = st.columns(2)
-
-january = col_1.checkbox('January Cohort')
-february = col_2.checkbox('February Cohort')
-march = col_1.checkbox('March Cohort')
-april = col_2.checkbox('April Cohort')
-may = col_1.checkbox('May Cohort')
-june = col_2.checkbox('June Cohort')
-july = col_1.checkbox('July Cohort')
-august = col_2.checkbox('August Cohort')
-september = col_1.checkbox('September Cohort')
-october = col_2.checkbox('October Cohort')
-november = col_1.checkbox('November Cohort')
-december = col_2.checkbox('December Cohort')
-
-# January Deta Detabase
+# Form
 deta = Deta(st.secrets["deta_key"])
-deta = Deta(st.secrets["deta_key1"])
-deta = Deta(st.secrets["deta_key2"])
 
-
-if january:
-    assignment = st.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
-    # Excel Assignment
-    if assignment == 'Excel Internship':
-        st.subheader("January Cohort Excel Page")
-        form = st.form("forms", clear_on_submit=True)
-        name = form.text_input("Student Name")
-        folder = form.text_input("Google Drive Link")
-        submit = form.form_submit_button("Submit")
-        if submit:
-            st.success("Submitted Successfully")
-            db.put({"Name": name,  "Folder Link": folder})
-
-    if assignment == 'SQL Internship':
-        st.subheader("January Cohort SQL Page")
-        form1 = st.form("forms1", clear_on_submit=True)
-        name1 = form1.text_input("Student Name")
-        folder1 = form1.text_input("Google Drive Link")
-        submit1 = form1.form_submit_button("Submit")
-        if submit1:
-            st.success("Submitted Successfully")
-            db.put({"Name": name1, "Folder Link": folder1})
-            
-    if assignment == 'Tableau Internship':
-        st.subheader("January Cohort Tableau Page")
-        form2 = st.form("forms2", clear_on_submit=True)
-        name2 = form2.text_input("Student Name")
-        folder2 = form2.text_input("Google Drive Link")
-        submit2 = form2.form_submit_button("Submit")
-        if submit2:
-            st.success("Submitted Successfully")
-            db.put({"Name": name2, "Folder Link": folder2})
-            
-
-
-
-
-
+with st.form("internship app"):
+    name = st.text_input('Your Name')
+    cohort = st.radio('Select Your Cohort', ('January Cohort', 'February Cohort', 'March Cohort', 'April Cohort', 'May Cohort',
+                                             'June Cohort', 'July Cohort', 'August Cohort', 'September Cohort',
+                                             'October Cohort', 'November Cohort', 'December Cohort')
+    course = st.checkbox('Excel', 'SQL', 'Tableau', 'PowerBI')
+    link = st.text_input('Your Google Drive Link')
+    submit = st.form_submit_button("Submit")
+    if submit:
+           db.put({"Student Name":name, "Cohort":cohort, "Course":course, "Google Drive Link":link})
+                      
+    
