@@ -19,9 +19,9 @@ january = st.button("January Cohort")
 if january:
         assignment = st.sidebar.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
 february = st.button("January Cohort")
-if february:
-        assignment = st.sidebar.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
-
+else:
+    january = st.button("January Cohort")
+        
         
 
 
