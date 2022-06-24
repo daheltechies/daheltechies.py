@@ -36,8 +36,10 @@ with st.form("internship app"):
     if submit:
            db.put({"Student Name":name, "Cohort":cohort, "Course":course, "Google Drive Link":link})
             
-
+try:
 db_content = db.fetch().items
 st.write(db_content)
+except:
+    pass
                       
     
