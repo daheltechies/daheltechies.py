@@ -15,13 +15,5 @@ col2.image(image)
 
 st.write("Please Choose The Right Cohort You Belong To")
 
-january = st.button("January Cohort")
-if january:
-        assignment = st.sidebar.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
-february = st.button("January Cohort")
-else:
-    january = st.button("January Cohort")
-        
-        
 
 
