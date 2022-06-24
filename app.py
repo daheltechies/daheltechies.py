@@ -31,7 +31,7 @@ november = col_1.checkbox('November Cohort')
 december = col_2.checkbox('December Cohort')
 
 if january:
-    assignment = st.sidebar.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
+    assignment = st.selectbox("Choose:", ('Excel Internship', 'SQL Internship','Tableau Internship', 'PowerBI Internship'))
 
 
 
