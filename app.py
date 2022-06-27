@@ -26,14 +26,14 @@ col_1, col_2 = st.columns(2)
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("Internship-Records")
 
-with st.form("internship app"):
-    name = col_1.text_input('Your Name')
-    cohort = col_1.text_input('Write Your Cohort Month')
-    excel = col_2.text_input('Enter Excel Google Drive Folder Link (If Null Skip)')
-    sql = col_2.text_input('Enter Your SQL Google Drive Folder Link')
-    tableau = col_2.text_input('Enter Your Tableau Google Drive Folder Link')
-    powerbi = col_1.text_input('Enter Your Power BI Google Drive Folder Link')
-    submit = st.form_submit_button("Submit")
+form = st.form("forms", clear_on_submit=False)
+name = col_1.text_input('Your Name')
+cohort = col_1.text_input('Write Your Cohort Month')
+excel = col_2.text_input('Enter Excel Google Drive Folder Link (If Null Skip)')
+sql = col_2.text_input('Enter Your SQL Google Drive Folder Link')
+tableau = col_2.text_input('Enter Your Tableau Google Drive Folder Link')
+powerbi = col_1.text_input('Enter Your Power BI Google Drive Folder Link')
+submit = st.form_submit_button("Submit")
     if submit:
            db.put({"Student_Name":name, "Cohort":cohort, "Excel":excel, "SQL":sql, "Tableau":tableau, "PowerBI":powerbi})
             
