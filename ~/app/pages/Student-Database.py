@@ -13,7 +13,7 @@ image = Image.open('image1.png')
 # Page Header
 col5.header("Dahel Techies Student Database App")
 title_5 =  '<p style="font-family:sans-serif; color:Grey;">This Application allows you to submit your student details.</p>'
-col1.markdown(title_5, unsafe_allow_html=True)
+col5.markdown(title_5, unsafe_allow_html=True)
 title_6 = '<p style="font-family:sans-serif; color:Grey;">Kindly fill in your details correctly</p>'
 col5.markdown(title_6, unsafe_allow_html=True)
 col6.image(image)
