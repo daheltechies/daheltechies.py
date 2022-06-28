@@ -2,3 +2,9 @@
 backgroundColor = "#E0FBFC"
 secondaryBackgroundColor = "#FEFCFD"
 textColor = "#202C59"
+
+[theme]
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#202C59"
+
