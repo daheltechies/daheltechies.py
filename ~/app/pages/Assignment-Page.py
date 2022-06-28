@@ -13,11 +13,11 @@ image = Image.open('image1.png')
 # Page Header
 col3.header("Dahel Techies Assignment App")
 title_4 =  '<p style="font-family:sans-serif; color:Grey;">This Application allows you to submit your Assignment files.</p>'
-col3.markdown(title_1, unsafe_allow_html=True)
+col3.markdown(title_4, unsafe_allow_html=True)
 title_5 = '<p style="font-family:sans-serif; color:Grey;">Kindly fill in your details correctly</p>'
-col3.markdown(title_2, unsafe_allow_html=True)
+col3.markdown(title_5, unsafe_allow_html=True)
 title_6 = '<p style="font-family:sans-serif; color:Grey;">Choose the cohort you belong to correctly</p>'
-col3.markdown(title_3, unsafe_allow_html=True)
+col3.markdown(title_6, unsafe_allow_html=True)
 col4.image(image)
 
 col_3, col_4 = st.columns(2)
