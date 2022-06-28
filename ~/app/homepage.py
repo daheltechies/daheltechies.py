@@ -35,5 +35,6 @@ with st.form("intership app", clear_on_submit=True):
     powerbi = col_1.text_input('Enter Your Power BI Google Drive Folder Link')
     submit = st.form_submit_button("Submit")
     if submit:
+           st.write("Submit Successful")
            db.put({"Name1":name, "Course":cohort, "Excel_Course":excel, "SQL_Course":sql, "Tableau_Course":tableau, "PowerBI_Course":powerbi})
     
